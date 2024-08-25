@@ -6,7 +6,7 @@ pipeline {
     }
     stages {
         
-        stage('Compile') {
+        stage('Compilation of java code') {
             steps {
             sh  "mvn compile"
             }
@@ -20,7 +20,7 @@ pipeline {
         
         stage('Package') {
             steps {
-                sh "mvn package"
+                sh "mvn clean package"
             }
         }
     }
